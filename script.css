@@ -1,0 +1,16 @@
+// Bascule clair/sombre
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  toggleBtn.textContent = document.body.classList.contains('dark') ? 'Mode Clair' : 'Mode Sombre';
+});
+
+// Animation d'apparition des cartes
+const cards = document.querySelectorAll('.card');
+window.addEventListener('DOMContentLoaded', () => {
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add('show');
+    }, index * 200); // apparition en décalé
+  });
+});
