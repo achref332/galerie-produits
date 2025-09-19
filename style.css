@@ -1,0 +1,74 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #111;
+  --card-bg: #fff;
+  --accent-color: #06b6d4;
+}
+
+body.dark {
+  --bg-color: #111;
+  --text-color: #f9f9f9;
+  --card-bg: #1f1f1f;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s, color 0.4s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0891b2;
+}
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, opacity 0.4s;
+  opacity: 0;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Animation à l'apparition */
+.card.show {
+  opacity: 1;
+}
